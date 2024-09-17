@@ -1,0 +1,1 @@
+drop trigger tr_mtk_pendente

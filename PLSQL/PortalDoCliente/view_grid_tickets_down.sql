@@ -1,0 +1,1 @@
+drop view view_grid_tickets;

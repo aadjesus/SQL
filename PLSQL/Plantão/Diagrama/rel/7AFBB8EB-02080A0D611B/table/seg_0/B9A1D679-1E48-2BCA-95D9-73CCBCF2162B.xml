@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B9A1D679-1E48-2BCA-95D9-73CCBCF2162B" name="Programacao">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 13:56:28 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="47335F33-5C7B-B601-64BF-5793A1E92AA4">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:49:33 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Linha_Column_1" id="A367DC63-1103-B4A7-7CA8-F9E29BD232F7">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:52:12 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB8DE7B0-4ECE-95B5-91EF-2E530E79377F" referredColumn="1FE3329A-C643-3DA4-4BAF-13F427242C33"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E22E7105-5B15-69C7-BBDD-322763BCF677" name="Programacao_PK">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:49:33 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47335F33-5C7B-B601-64BF-5793A1E92AA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1FA81864-FA01-31CF-DC12-C11D8DDDB162" name="Programacao_Linha_FK">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:52:12 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A367DC63-1103-B4A7-7CA8-F9E29BD232F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

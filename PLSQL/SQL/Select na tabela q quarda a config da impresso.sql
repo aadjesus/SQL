@@ -1,0 +1,1 @@
+select * from ctr_dados_ini where secao like '%CGSSolicitacaoDeColetaResumida%' for update

@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AAC5FE7E-FE5D-B3DF-0076-8A8E764C80F5" name="Empresa">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 13:55:20 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EmpresaAutorizada_Id" id="E23D14BD-2E00-CF34-66F0-E6D10AB6F988">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 13:59:20 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AA3D5FDD-1153-A70B-B36D-4ACA6246187E" referredColumn="92CF7725-D2BE-8937-3004-38E7AA02BE63"/>
+</associations>
+</Column>
+<Column name="Id" id="DA0AFCDD-DFC8-DE64-1CBC-9911551DF28C">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 13:59:54 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="79D8A329-9DDD-8278-789E-A89C692EF415" name="Empresa_PK">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:00:17 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA0AFCDD-DFC8-DE64-1CBC-9911551DF28C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14E950BA-AE41-11CB-5F81-B15F764870C7" name="Empresa_EmpresaAutorizada_FK">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 13:59:20 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E23D14BD-2E00-CF34-66F0-E6D10AB6F988"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

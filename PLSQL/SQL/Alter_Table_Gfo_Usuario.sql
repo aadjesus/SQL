@@ -1,0 +1,1 @@
+Alter Table GFO_USUARIO Add(ADICIONA_LINHAS_TMP Varchar2(1));

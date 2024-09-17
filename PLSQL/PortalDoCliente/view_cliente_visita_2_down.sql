@@ -1,0 +1,1 @@
+DROP MATERIALIZED VIEW view_cliente_visita; 

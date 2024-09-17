@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="88E54F92-BB09-33CB-D337-69F236A939B9" name="Empresa">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 15:02:37 UTC</createdTime>
+<ownerDesignName>Teste1</ownerDesignName>
+<engineerTo>
+<item key="9693F046-D81A-AEF6-D543-3A660A7BC53D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="F76FF1CC-DBD6-F8A2-E681-E5920F7505B0">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 15:04:27 UTC</createdTime>
+<generatorID>21F7CA20-EC9F-191D-F06A-1CCA1EF6BB38</generatorID>
+<ownerDesignName>Teste1</ownerDesignName>
+<engineerTo>
+<item key="9693F046-D81A-AEF6-D543-3A660A7BC53D" value="true"/>
+</engineerTo>
+<referedAttribute>BFFE6D1F-43F2-BF85-089F-B09B8A37D18A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
