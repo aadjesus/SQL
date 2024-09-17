@@ -1,0 +1,16 @@
+create table GFO_CONTROLEOPERACIONAL_PREV
+(
+  ID_CONTROLE_OPERACIONAL NUMBER,
+  CODIGOVEIC              NUMBER not null,
+  CODINTLINHA             NUMBER(5),
+  COD_LOCALIDADE          NUMBER(4) not null,
+  DATA_OCORRENCIA         DATE,
+  PONTO_CONTROLE          VARCHAR2(1) 
+);
+
+
+Alter Table GFO_CONTROLEOPERACIONAL_PREV
+Add Constraint PK_CONTROLEOPE_PREV
+Primary Key(CODIGOVEIC, COD_LOCALIDADE) Using Index
+Tablespace Globus_Index;
+

@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C64C82A9-9515-DBD4-414B-BE53A68FBFBC" name="Localidade">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 13:56:12 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="70442DE1-673A-9951-C8A0-30B4F2245413">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:50:40 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BAF3D63D-9DAE-6537-FCF1-ACBA6706C51D" name="Localidade_PK">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:50:40 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70442DE1-673A-9951-C8A0-30B4F2245413"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

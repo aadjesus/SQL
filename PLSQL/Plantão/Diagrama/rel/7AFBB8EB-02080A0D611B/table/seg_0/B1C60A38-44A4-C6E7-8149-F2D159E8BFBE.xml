@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B1C60A38-44A4-C6E7-8149-F2D159E8BFBE" name="Funcionario">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 13:55:45 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id" id="8C6DCF3F-D60D-75D9-63B8-C8B6598D6B45">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:50:10 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Filial_Id" id="47AABDAC-832C-5E23-0C77-73FA6F501BB8">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:53:22 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8946C967-9974-F9EE-238A-F617C9984083" referredColumn="C897D0E3-38AC-8E88-A5F6-D0F673BCB4A0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="885FFEEB-0F7B-3163-9322-1ACA9462E336" name="Funcionario_PK">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:50:10 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C6DCF3F-D60D-75D9-63B8-C8B6598D6B45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E42F1459-3B47-5B73-9814-19C70A954319" name="Funcionario_Filial_FK">
+<createdBy>alessandro.augusto</createdBy>
+<createdTime>2019-01-17 14:53:22 UTC</createdTime>
+<ownerDesignName>Diagrama</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47AABDAC-832C-5E23-0C77-73FA6F501BB8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

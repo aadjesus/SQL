@@ -1,0 +1,19 @@
+
+
+Select JB.JOB_NAME 
+  from USER_SCHEDULER_JOBS JB 
+ where JB.ENABLED = 'FALSE'
+
+For job in (Select JB.JOB_NAME from USER_SCHEDULER_JOBS JB where JB.ENABLED = 'FALSE')
+Loop
+  DBMS_SCHEDULER.ENABLE(''|| JOB.JOB_NAME || '');
+End Loop;
+
+ 
+
+ 
+
+For job in (Select JB.JOB_NAME from USER_SCHEDULER_JOBS JB where JB.ENABLED = 'TRUE')
+Loop
+  DBMS_SCHEDULER.DISABLE(''|| JOB.JOB_NAME ||'', TRUE);
+End Loop;

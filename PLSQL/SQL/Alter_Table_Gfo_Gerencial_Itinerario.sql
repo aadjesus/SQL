@@ -1,0 +1,1 @@
+Alter Table gfo_gerencial_itinerario Add(previsto Date);

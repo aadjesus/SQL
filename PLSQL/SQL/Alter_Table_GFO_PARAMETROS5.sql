@@ -1,0 +1,1 @@
+Alter Table GFO_PARAMETROS Add LINHAS_DIV_FILIAIS varchar2(1) default 'N' 
