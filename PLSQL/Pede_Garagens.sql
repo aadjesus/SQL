@@ -38,7 +38,7 @@ ORDER BY CTR_GARAGEM.CODIGOGA;
            , CTR_GARAGEM.NOMEGA 
         FROM CTR_GARAGEM
            , CTR_FILIAL_GAR
-           , CTR_FILIAL F
+           , CTR_FILIAL               F
            , CTR_USUARIOSPOREMPFILGAR U 
        WHERE CTR_FILIAL_GAR.ATIVO         = 'S' 
          AND CTR_FILIAL_GAR.CODIGOEMPRESA = 1
