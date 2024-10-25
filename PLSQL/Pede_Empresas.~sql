@@ -7,9 +7,9 @@ SELECT E.CODIGOEMPRESA
      , A.INSCRICAOEMPRESA
      , A.NOMEFANTASIAEMPRESA
      , C.SISTEMA
-  FROM CTR_CADEMP E
-     , CTR_EMPAUTORIZADAS A
-     , CTR_AUTORIZACAOSISTEMAS C
+  FROM CTR_CADEMP__OK              E
+     , CTR_EMPAUTORIZADAS__OK      A
+     , CTR_AUTORIZACAOSISTEMAS__OK C
  WHERE E.CODINTEMPAUT = A.CODINTEMPAUT
    AND E.CODINTEMPAUT = C.CODINTEMPAUT
    AND C.SISTEMA = 'ACD'
@@ -27,14 +27,14 @@ SELECT DISTINCT
      , A.INSCRICAOEMPRESA
      , A.NOMEFANTASIAEMPRESA
      , C.SISTEMA
-  FROM CTR_CADEMP               E
-     , CTR_EMPAUTORIZADAS       A
-     , CTR_AUTORIZACAOSISTEMAS  C 
+  FROM CTR_CADEMP__OK               E
+     , CTR_EMPAUTORIZADAS__OK       A
+     , CTR_AUTORIZACAOSISTEMAS__OK  C 
  WHERE E.CODIGOEMPRESA IN (SELECT DISTINCT E.CODIGOEMPRESA
-                             FROM CTR_CADEMP               E
-                                , CTR_EMPAUTORIZADAS       A
-                                , CTR_AUTORIZACAOSISTEMAS  C
-                                , CTR_USUARIOSPOREMPFILGAR U
+                             FROM CTR_CADEMP__OK               E
+                                , CTR_EMPAUTORIZADAS__OK       A
+                                , CTR_AUTORIZACAOSISTEMAS__OK  C
+                                , CTR_USUARIOSPOREMPFILGAR__OK U
                             WHERE E.CODINTEMPAUT  = A.CODINTEMPAUT
                               AND E.CODINTEMPAUT  = C.CODINTEMPAUT
                               AND E.CODIGOEMPRESA = U.CODIGOEMPRESA
@@ -54,16 +54,16 @@ SELECT DISTINCT
      , A.INSCRICAOEMPRESA
      , A.NOMEFANTASIAEMPRESA
      , C.SISTEMA
-  FROM CTR_CADEMP              E
-     , CTR_EMPAUTORIZADAS      A
-     , CTR_AUTORIZACAOSISTEMAS C
+  FROM CTR_CADEMP__OK              E
+     , CTR_EMPAUTORIZADAS__OK      A
+     , CTR_AUTORIZACAOSISTEMAS__OK C
  WHERE E.CODIGOEMPRESA IN      
        (SELECT DISTINCT F.CODIGOEMPRESA
           FROM CTR_FILIAL              F
-             , CTR_EMPAUTORIZADAS      A
-             , CTR_AUTORIZACAOSISTEMAS C
-             , CTR_CADASTRODEUSUARIOS  CADU
-             , CTR_AUTORIZACAOUSUARIOS AU
+             , CTR_EMPAUTORIZADAS__OK      A
+             , CTR_AUTORIZACAOSISTEMAS__OK C
+             , CTR_CADASTRODEUSUARIOS__OK  CADU
+             , CTR_AUTORIZACAOUSUARIOS__OK AU
              , CTR_GRUPOUSUARIOS       GU 
          WHERE F.CODINTEMPAUT  = AU.CODINTEMPAUT
            AND AU.CODIGOGRPUSU = CADU.CODIGOGRPUSU
@@ -86,15 +86,15 @@ SELECT DISTINCT
      , A.INSCRICAOEMPRESA
      , A.NOMEFANTASIAEMPRESA
      , C.SISTEMA
-  FROM CTR_CADEMP               E
-     , CTR_EMPAUTORIZADAS       A
-     , CTR_AUTORIZACAOSISTEMAS  C
+  FROM CTR_CADEMP__OK               E
+     , CTR_EMPAUTORIZADAS__OK       A
+     , CTR_AUTORIZACAOSISTEMAS__OK  C
  WHERE E.CODIGOEMPRESA IN (SELECT DISTINCT 
                                   F.CODIGOEMPRESA
                              FROM CTR_FILIAL              F
-                                , CTR_EMPAUTORIZADAS      A
-                                , CTR_AUTORIZACAOSISTEMAS C
-                                , CTR_CADASTRODEUSUARIOS  CADU
+                                , CTR_EMPAUTORIZADAS__OK      A
+                                , CTR_AUTORIZACAOSISTEMAS__OK C
+                                , CTR_CADASTRODEUSUARIOS__OK  CADU
                             WHERE F.CODINTEMPAUT = A.CODINTEMPAUT
                               AND F.CODINTEMPAUT = C.CODINTEMPAUT
                               AND C.SISTEMA      = 'ACD'
