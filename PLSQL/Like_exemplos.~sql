@@ -1,0 +1,12 @@
+select *
+  from RHTAON_DIALOGO_TITULO 
+ where descricao LIKE 'A%'   -- Todas as strings que começam com a letra A 
+    or descricao LIKE '%A'   -- Todas as strings que terminam com a letra A 
+    or descricao LIKE '%A%'  -- Todas as strings que tenham a letra A em qualquer posição 
+    or descricao LIKE 'A_'   -- String de 2 caracteres que tenha a primeira letra A e o segundo caractere seja qualquer outro 
+    or descricao LIKE '_A'   -- String de 2 caracteres em que o primeiro caractere seja qualquer um, e o último seja a letra A 
+    or descricao LIKE '_A_'  -- String de 3 caracteres cuja segunda letra seja A, e o primeiro e terceiro caractere seja qualquer outro 
+    or descricao LIKE '%A_'  -- Letra A na penúltima posição, e o último caractere seja qualquer outro 
+    or descricao LIKE '_A%'  -- Letra A na segunda posição, sendo o primeiro caractere qualquer outro 
+    or descricao LIKE '___'  -- String com exatos 3 caracteres 
+    or descricao LIKE '%'    -- String com pelo menos 2 caracteres    

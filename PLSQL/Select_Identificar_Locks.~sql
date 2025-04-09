@@ -1,0 +1,13 @@
+     SELECT lo.session_id
+          , s.username
+          , s.program
+          , o.owner
+          , o.object_name
+       FROM v$locked_object a
+ INNER JOIN v$session s ON a.session_id = s.sid
+ INNER JOIN dba_objects b ON a.object_id = b.object_id
+      WHERE b.object_name = 'ESFISS_NSTECH';
+
+-- Derubar sessão       
+-- ALTER SYSTEM KILL SESSION 'SID,SERIAL#';  
+    

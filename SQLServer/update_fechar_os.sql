@@ -1,0 +1,31 @@
+BEGIN TRY
+BEGIN TRANSACTION
+
+	select count(*) from OS a
+	where TenantId = 41
+	  and Numero not in (1789,1794,1788,1785,1776,1777,1774,1778,1775,1804,1801,1795,1780,1787,1783,1786,1796,1779,1782,1792,1781,1793,1791,1800,1799,1802,1803,1798,1790)
+	  and DataHoraAbertura <= '2025-02-05 23:59:59'
+	  and DataHoraFechamento is null;
+
+
+	update OS 
+		 set DataHoraFechamento = GETDATE()
+		   , status = 1
+	  where TenantId = 41
+		and Numero not in (1789,1794,1788,1785,1776,1777,1774,1778,1775,1804,1801,1795,1780,1787,1783,1786,1796,1779,1782,1792,1781,1793,1791,1800,1799,1802,1803,1798,1790)
+		and DataHoraAbertura <= '2025-02-05 23:59:59'
+		and DataHoraFechamento is null;
+
+	select count(*) from OS a
+	where TenantId = 41
+	  and Numero not in (1789,1794,1788,1785,1776,1777,1774,1778,1775,1804,1801,1795,1780,1787,1783,1786,1796,1779,1782,1792,1781,1793,1791,1800,1799,1802,1803,1798,1790)
+	  and DataHoraAbertura <= '2025-02-05 23:59:59'
+	  and DataHoraFechamento is null;
+
+	  --ROLLBACK TRANSACTION
+		COMMIT TRANSACTION
+END TRY
+BEGIN CATCH
+	PRINT ERROR_MESSAGE()
+	ROLLBACK TRANSACTION
+END CATCH
