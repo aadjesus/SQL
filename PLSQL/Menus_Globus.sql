@@ -8,7 +8,16 @@ select a.sistema, a.caption, b.qtde
                                                            and a.indicemenu = b.indicemenu
 --where a.sistema = 'ACD'
 
-     
---select * from ctr_menusdosistema where sistema = 'ABA' and SUBSTR(indicemenu,0,2) = '00' caption = 'Cadastros'
+/*     
 
---select 'union all select a.*, '''|| a.owner ||''' from ' || a.owner || '.acd_grauacidente a' from all_all_tables a where a.table_name = upper('acd_grauacidente')
+select * 
+  from ctr_menusdosistema 
+ where sistema = 'ABA' 
+   and SUBSTR(indicemenu,0,2) = '00' 
+   caption = 'Cadastros'
+
+select 'union all select a.*, '''|| a.owner ||''' from ' || a.owner || '.acd_grauacidente a' 
+  from all_all_tables a 
+ where a.table_name = upper('acd_grauacidente')
+ 
+*/
