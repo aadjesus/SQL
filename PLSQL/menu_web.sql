@@ -1,0 +1,41 @@
+declare
+  v_existe number;
+BEGIN
+  SELECT count(*)
+    INTO v_existe
+    FROM user_tables
+   WHERE table_name = 'MENUWEB';
+
+  IF v_existe = 0 THEN
+    EXECUTE IMMEDIATE 'CREATE TABLE MenuWeb (
+      nome VARCHAR2(100) NOT NULL,
+      data_inclusao DATE DEFAULT SYSDATE NOT NULL,
+      data_inativo DATE
+    )';
+  END IF;
+
+EXCEPTION
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('Ocorreu um erro: ' || SQLERRM);
+END;
+-------------------------------------------------------------------------------------------------------------------------------------------------
+declare
+  v_existe number;
+  v_nome_menu varchar2(100) := 'Teste';
+BEGIN
+    SELECT COUNT(*)
+      INTO v_existe
+      FROM MenuWeb
+     WHERE nome = v_nome_menu;
+
+    IF v_existe = 0 THEN
+        INSERT INTO MenuWeb (nome)
+        VALUES (v_nome_menu);
+        COMMIT;
+    END IF;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK; -- Desfaz a transação em caso de erro
+        DBMS_OUTPUT.PUT_LINE('Ocorreu um erro ao tentar incluir o menu: ' || SQLERRM);
+END;
