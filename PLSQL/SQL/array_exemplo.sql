@@ -19,6 +19,7 @@ SELECT
 From Item
 
 /*
+------------------ 1
 SELECT 
        REGEXP_SUBSTR( t.list, '([^,]*)($|,)', 1, l.lvl, NULL, 1 ) AS item,
        l.lvl
@@ -29,4 +30,13 @@ FROM   (select 'aaa, b, c' as list from dual) t
            FROM DUAL
          CONNECT BY LEVEL <= REGEXP_COUNT( t.list, ',' ) + 1
        ) l;
+	   
+------------------ 2	   
+SELECT
+    TRIM(REGEXP_SUBSTR(sua_string, '[^,]+', 1, LEVEL)) AS sua_coluna
+FROM
+    (SELECT 'valor1,valor2,valor3,valor4' AS sua_string FROM DUAL)
+CONNECT BY
+    LEVEL <= LENGTH(sua_string) - LENGTH(REPLACE(sua_string, ',', '')) + 1;	   
+	   
 */
