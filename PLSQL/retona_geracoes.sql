@@ -2,7 +2,8 @@ select 'union select FN_GERACAO_POR_DATA(a.DTNASCTOFUNC) as geracao, count(*) as
        '  from ' || a.username || '.FLP_FUNCIONARIOS a' || 
        ' where exists(select 1 ' ||
        '                from   ' || a.username || '.CTR_CADASTRODEUSUARIOS b ' ||
-       '               where A.CODINTFUNC = B.CODINTFUNC) ' ||
+       '               where A.CODINTFUNC = B.CODINTFUNC' ||
+       '                 and b.ativo = ''S''   ) ' ||
        'group by FN_GERACAO_POR_DATA(a.DTNASCTOFUNC)'       
   from all_users a
  where exists (select 1
@@ -34,3 +35,7 @@ BEGIN
 
   RETURN v_geracao;
 END;
+
+
+--select geracao, sum(qtde) qtde  from (
+--) group by geracao
