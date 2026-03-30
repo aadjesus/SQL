@@ -1,0 +1,4 @@
+update ctr_cadastrosistemas set descricaodosistema = 'Controle a manutenção da frota, gerenciando preventivas, corretivas, custos e disponibilidade.' where sistema = 'MAN';
+update ctr_cadastrosistemas set descricaodosistema = 'Registre acidentes da frota, controlando despesas, orçamentos, ocorrências e andamento dos processos. ' where sistema = 'ACD';
+update ctr_cadastrosistemas set descricaodosistema = 'Automatize a apuração fiscal, garantindo controle, agilidade, segurança e conformidade tributária. ' where sistema = 'ESF';
+update ctr_cadastrosistemas set descricaodosistema = 'Controle o abastecimento da frota, monitorando consumo, custos, operações e movimentações.' where sistema = 'ABA';
