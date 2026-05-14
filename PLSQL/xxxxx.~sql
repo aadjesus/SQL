@@ -1,0 +1,32 @@
+  select a.ID_NFE_CTE
+        , a.serie
+        , a.numero
+        , a.dataEmissao
+        , a.dataGerou
+        , a.CHAVEDEACESSO
+        , a.TIPO_NOTA
+        , a.conferido
+        , a.CONTEUDO_CLOB
+        , a.conteudoXml
+        , a.CODINTNF_ESFNF
+        , a.CODINTNF_BGMNF
+        , a.sistema
+        
+        , b.CODINTNF         
+        , b.VALORTOTALNF
+        
+        , c.codigoEmpresa
+        , c.ICMSVALORENTRA
+        , c.IPIVALORENTRA
+        
+        , d.CODIGOEMPRESA,d.CODIGOFL,d.RSOCIALEMPRESA, d.INSCRICAOEMPRESA, d.NOMEFANTASIAEMPRESA
+                
+from BGM_XML_TERCEIROS a
+left join TUR_NOTAFISCAL b on a.CODINTNF_BGMNF = b.CODINTNF
+left join ESFENTRA       c on b.CODDOCTOESF = c.CODDOCTOESF
+left join VW_FILIAL      d on c.codigoempresa = d.CODIGOEMPRESA and c.codigofl = d.CODIGOFL
+          
+--select  b.CODINTNF, b.VALORTOTALNF from TUR_NOTAFISCAL b
+--select  c.codigoEmpresa,c.ICMSVALORENTRA,c.IPIVALORENTRA from ESFENTRA c
+--select d.CODIGOEMPRESA,d.CODIGOFL,d.RSOCIALEMPRESA, d.INSCRICAOEMPRESA, d.NOMEFANTASIAEMPRESA from VW_FILIAL d
+--
