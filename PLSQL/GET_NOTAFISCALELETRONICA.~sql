@@ -1,3 +1,5 @@
+--codModelo == '55_S'
+
 SELECT
     NFE.ID_NFE                   AS ID,
     NFE.NUMERONFE                AS NUMERO,

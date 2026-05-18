@@ -1,5 +1,3 @@
---codModelo == '63_S'
-
 SELECT
     INT_NFSE.ID,
     INT_NFSE.SERIE_RPS           AS SERIE,

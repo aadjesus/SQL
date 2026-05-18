@@ -1,5 +1,3 @@
---codModelo == '67_S'
-
 SELECT
     CTE.ID_CTE                   AS ID,
     CTE.ID_DOCUMENTO             AS NUMERO,

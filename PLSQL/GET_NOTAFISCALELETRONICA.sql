@@ -1,4 +1,4 @@
-enabled: filters?.codModelo == '55_S',
+--codModelo == '55_S'
 
 SELECT
     NFE.ID_NFE                   AS ID,

@@ -1,4 +1,4 @@
-enabled: filters?.codModelo == '63_E',
+--codModelo == '63_E'
 
 SELECT
     '63_E'                       AS codModelo
