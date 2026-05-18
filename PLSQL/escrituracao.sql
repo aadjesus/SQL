@@ -14,7 +14,7 @@ select '57_E;55_E;67_E' AS codModelo
      , a.etapa_importacao
      , a.CONTEUDOXML               AS CONTEUDO_XML     
   from BGM_XML_TERCEIROS a
-    LEFT JOIN VW_FILIAL  b on a.empresa = b.CODIGOEMPRESA and a.filial = b.CODIGOFL
+LEFT JOIN VW_FILIAL  b on a.empresa = b.CODIGOEMPRESA and a.filial = b.CODIGOFL
 WHERE ROWNUM = 1
 ------------------------------------------------------------------------------------------------------------------------------------
 union all

@@ -31,7 +31,7 @@ select '63_E' as codModelo
      , a.chavedeacesso
      , a.conferido
      , a.etapa_importacao
-     , a.CONTEUDO_XML             AS CONTEUDO_XML
+     , null as CONTEUDO_XML
   from ESF_DOCUMENTO_ELETRONICO a
     LEFT JOIN VW_FILIAL  b on a.empresa = b.CODIGOEMPRESA and a.filial = b.CODIGOFL 
 WHERE ROWNUM = 1
@@ -69,8 +69,7 @@ select '55_S' as codModelo
      , a.chavedeacesso
      , a.conferido     
      , a.etapa_importacao
---     , a.CONTEUDO_CLOB
---     , a.CONTEUDONF               AS CONTEUDO
+     , a.CONTEUDONF               AS CONTEUDO_XML
   from BGM_NOTAFISCAL_ELETRONICA a
     LEFT JOIN VW_FILIAL  b on a.empresa = b.CODIGOEMPRESA and a.filial = b.CODIGOFL     
 WHERE ROWNUM = 1
@@ -89,7 +88,7 @@ SELECT '63_S' as codModelo
      , CODIGO_VERIFICACAO as chavedeacesso
      , a.conferido
      , a.etapa_importacao
---     , a.CONTEUDO_XML        AS CONTEUDO_CLOB
+     , null as CONTEUDO_XML
  FROM BGM_INTEGRADOR_NFSE a
 LEFT JOIN ESFISS     b ON a.NUMERO_NFSE_GERADO = b.DOCUMENTOINI
 LEFT JOIN VW_FILIAL  c on b.CODIGOEMPRESA = c.CODIGOEMPRESA and b.CODIGOFL = c.CODIGOFL      
@@ -109,8 +108,7 @@ select '57_S' as codModelo
      , a.chavedeacesso
      , a.conferido
      , a.etapa_importacao
---     , a.CONTEUDO_CLOB,
---     , a.CONTEUDO                AS CONTEUDO_XML,     
+     , a.CONTEUDO                AS CONTEUDO_XML
 FROM BGM_CTRC_ELETRONICO a    
     LEFT JOIN VW_FILIAL  b on a.empresa = b.CODIGOEMPRESA and a.filial = b.CODIGOFL
 WHERE ROWNUM = 1
