@@ -1,3 +1,7 @@
+--codModelo === '57_E'
+--codModelo === '55_E'
+--codModelo === '67_E'
+
 SELECT
     XT.ID_NFE_CTE                AS ID,
     XT.SERIE,
