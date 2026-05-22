@@ -4,7 +4,7 @@
                           WHEN EXTRACT(YEAR FROM B.DTNASCTOFUNC) BETWEEN 1996 AND 2010                       THEN 'GERA플O Z'
                           WHEN EXTRACT(YEAR FROM B.DTNASCTOFUNC) BETWEEN 1981 AND 1995                       THEN 'GERA플O Y'
                           WHEN EXTRACT(YEAR FROM B.DTNASCTOFUNC) BETWEEN 1965 AND 1980                       THEN 'GERA플O X'
-                          WHEN EXTRACT(YEAR FROM B.DTNASCTOFUNC) BETWEEN 1946 AND 1964                       THEN 'BABY BOOMER'
+                          WHEN EXTRACT(YEAR FROM B.DTNASCTOFUNC) BETWEEN 1946 AND 1964                       THEN 'GERA플O BABY BOOMER'
                      END AS GERACAO
                 FROM CTR_CADASTRODEUSUARIOS A
           INNER JOIN FLP_FUNCIONARIOS B ON A.CODINTFUNC = B.CODINTFUNC
@@ -12,3 +12,4 @@
                                FROM ACD_INFORMACOESGERAIS C
                               WHERE A.USUARIO = C.USUARIORESPABERTURA))
 GROUP BY GERACAO                      
+order by COUNT(*) desc 
