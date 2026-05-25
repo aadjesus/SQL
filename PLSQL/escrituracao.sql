@@ -1,5 +1,5 @@
 -- codModelo == '
-select '57_E;55_E;67_E' AS codModelo
+select '55_E;57_E;67_E'    AS codModelo
      , a.ID_NFE_CTE        as ID
      , b.CODIGOEMPRESA     as empresa
      , b.CODIGOFL          as filial
