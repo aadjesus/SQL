@@ -21,3 +21,4 @@ END
 CLOSE contact_cursor;
 DEALLOCATE contact_cursor;
 GO
+// ---
